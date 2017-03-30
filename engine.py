@@ -2,7 +2,7 @@
 # coding: utf-8
 
 
-__version__ = '0.02'
+__version__ = '0.03'
 __author__  = 'CARLOS DIAZ | FOUNDSTONE IR GROUP'
 __license__ = 'GNU General Public License version 2'
 
