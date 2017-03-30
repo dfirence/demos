@@ -32,12 +32,13 @@ def run_imageinfo( syntax ):
 
 def run_plugin( plugin ):
 	start = time.time()
-	print '[-] Start  {}'.format( plugin[1] )
+	print '[-] Start {}'.format( plugin[1] )
 	with open( devnull, 'w' ) as FNULL:
 		subprocess.call( plugin, stdout=FNULL )
 
-	end = '[+] Ends   {}: {:.2f}s'.format( plugin[1], time.time() - start )
-	print end
+	#end = '[+] Ends   {0:<20}: {:.2f}s'.format( plugin[1], time.time() - start )
+	end = '{:.2f}s'.format( time.time() - start )
+	print '[+] Ends  {:25}--> {}'.format( plugin[1], end )
 	return
 
 
@@ -55,6 +56,10 @@ def run_concurrently( queue ):
 		for proc in procs:
 			proc.join()
 			time.sleep( 0.05 )
-	end = '[+] Ends   Concurrency of {} tasks: {:.2f}s'.format( qsize, time.time() - start)
-	print '{}{}{}{}'.format( end, '\n', '-' * 48, '\n' )
+	#end = '[+] Ends  {:30} {}: {:.2f}s'.format( 'Concurrency of', qsize, 'tasks',time.time() - start)
+	t = '{:.2f}s'.format( time.time() - start )
+	end = '[+] Ends  Concurrent {} Tasks'.format( qsize )
+
+	print '{:35}--> {}{}{}{}'.format(end, t, '\n', '-' * 48, '\n' )
+	#print '{}{}{}{}'.format( end, '\n', '-' * 48, '\n' )
 	return
