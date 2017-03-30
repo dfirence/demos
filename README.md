@@ -130,6 +130,51 @@ _______________________________________________________________________
 _______________________________________________________________________
 
 
+
+# Snippet:  Sample Run of Volatize 
+
+[-] Start sockets
+[-] Start notepad
+[-] Start idt
+[-] Start pslist
+[-] Start gdt
+[-] Start sockscan
+[-] Start connections
+[-] Start connscan
+[-] Start malfind
+[-] Start modscan
+[+] Ends  sockets                  --> 3.84s
+[+] Ends  pslist                   --> 4.10s
+[+] Ends  notepad                  --> 4.41s
+[+] Ends  connections              --> 4.16s
+[+] Ends  gdt                      --> 4.29s
+[+] Ends  sockscan                 --> 4.57s
+[+] Ends  idt                      --> 4.80s
+[+] Ends  connscan                 --> 4.60s
+[+] Ends  modscan                  --> 4.70s
+[+] Ends  malfind                  --> 6.78s
+[+] Ends  Concurrent 10 Tasks      --> 7.29s
+------------------------------------------------
+
+[-] Start unloadedmodules
+[-] Start psxview
+[-] Start sessions
+[-] Start modules
+[-] Start hivescan
+[-] Start hivelist
+[-] Start privs
+[-] Start dlllist
+[+] Ends  unloadedmodules          --> 2.88s
+[+] Ends  sessions                 --> 3.43s
+[+] Ends  modules                  --> 3.42s
+[+] Ends  privs                    --> 3.62s
+[+] Ends  hivelist                 --> 3.90s
+[+] Ends  hivescan                 --> 4.00s
+[+] Ends  dlllist                  --> 4.34s
+[+] Ends  psxview                  --> 6.32s
+[+] Ends  Concurrent 8 Tasks       --> 6.73s
+------------------------------------------------
+
 # Recognition
 @aboutsecurity from Foundstone Intel Security Group on 'Fit for Purpose' feedback
 
