@@ -22,6 +22,7 @@ You need the following packages installed to use Volatize
 - tabulate  : pip install tabulate
 - futures   : pip install futures
 - tqdm      : pip install tqdm
+- colorama  : pip install colorama
 - Volatility
 
 # Configuration Needed
@@ -130,6 +131,7 @@ _______________________________________________________________________
 _______________________________________________________________________
 
 
+# Sample Runs
 
 # Recognition
 @aboutsecurity from Foundstone Intel Security Group on 'Fit for Purpose' feedback
