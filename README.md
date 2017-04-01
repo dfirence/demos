@@ -135,7 +135,14 @@ _______________________________________________________________________
 
 # Sample Runs
 
+If you want to just setup the analysis environment: >>> volatize.py parsemem --setup --memory /path/to/memory
+
+
+![Screenshot](setup.jpg)
+
+
 Real World - 4GB Memory Sample Running the program with auto option: >>> volatize.py parsemem --auto --memory /path/to/memory
+
 
 ![Screenshot](parsememauto.jpg)
 
@@ -143,11 +150,13 @@ Real World - 4GB Memory Sample Running the program with auto option: >>> volatiz
 
 Real World - 16GB Memory Sample - Running the program with parsemem option:  >>> volatize.py parsemem -p
 
+
 ![Screenshot](mainrun.jpg)
 
 
 
 Running the program with playbook option: >>> volatize.py playbook --vtdumps
+
 
 ![Screenshot](vtdumps.jpg)
 
