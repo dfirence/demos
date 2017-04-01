@@ -59,7 +59,7 @@ def create_case_subfolders():
 	D['BULKEX'] 	= ''
 	D['TIMELINES'] 	= ''
 
-	DUMPS     = [ 'PIDS', 'DLLS', 'EVTX', 'REGISTRY' ]
+	DUMPS     = [ 'PIDS', 'DLLS', 'EVTX', 'REGISTRY', 'MODS' ]
 	BULKEX    = [ 'PCAP', 'URLS', 'EMAIL' ]
 	TIMELINES = [ 'MASTER' ]
 
