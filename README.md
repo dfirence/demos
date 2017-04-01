@@ -132,6 +132,9 @@ _______________________________________________________________________
 
 
 # Sample Runs
+Run the program with parsemem option
+
+![alt tag](http://imgur.com/a/PcDB8)
 
 # Recognition
 @aboutsecurity from Foundstone Intel Security Group on 'Fit for Purpose' feedback
