@@ -6,27 +6,24 @@ import volcase
 import engine
 
 from playbook import vtdumps
-
+from playbook import vtmods
 
 __version__ = '0.02'
 __author__  = 'CARLOS DIAZ | FOUNDSTONE IR GROUP'
 __license__ = 'GNU General Public License version 2'
 
-
 def display(memoryprofile):
 	print '''
+Volatility Foundation (c) - An Advanced Memory Forensics Framework
+__________________________________________________________________
 
-______________________________________________________________________
- Volatility Foundation (c) - An advanced  memory forensics framework
-______________________________________________________________________
-
- Volatize.py By The Foundstone IR Group - Volatility Automation Tool
-
-	     GitHub Demo Version: http://bit.ly/2eSI72J
-_____________________________________________________________________
+Program Name	:	Volatize.py
+Program Author	:	@dfirence  | The Foundstone IR Group
+Program Purpose :	Volatility Automation Tool via CLI
+Program GitHub	:	http://bit.ly/2eSI72J
+__________________________________________________________________
 
 '''
-
 	print '\t\t[!] Parsing Memory Profile: %s\n\n' % memoryprofile['vol']
 	return
 
@@ -65,6 +62,7 @@ def main():
 
 	Playbook  = Subparser.add_parser( 'playbook', help=' Run Digital Playbooks as Scripts under Playbook Folder' )
 	Playbook.add_argument( '-vtd', '--vtdumps', action='store_true', help=' Run VTDUMPS.py:  Dump PIDS, Hash PIDS, Query Hashes in VT' )
+	Playbook.add_argument( '-vtm', '--vtmods', action='store_true', help=' Run VTMODS.py: Dump MODS, Hash MODS, Query Hashes in VT' )
 
 	Parsemem  = Subparser.add_parser( 'parsemem', help=' Parse Memory Sample' )
 	Parsemem.add_argument( '-a', '--auto'     , action='store_true', help=' Run in Auto Mode. Use with "--memory" flag' )
@@ -81,6 +79,8 @@ def main():
 	if args.mode == 'playbook':
 		if args.vtdumps:
 			vtdumps.run_playbook()
+		elif args.vtmods:
+			vtmods.run_playbook()
 
 
         elif args.mode == 'parsemem':

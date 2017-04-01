@@ -11,11 +11,13 @@ import cmds
 import time
 import subprocess
 import multiprocessing as mp
-
 from os import devnull
+
 from concurrent.futures import ProcessPoolExecutor
 from concurrent.futures import ThreadPoolExecutor
+from colorama import init, Fore, Back
 
+init(autoreset=True) # <- Reset Colorama Automatically
 
 def run_imageinfo( syntax ):
 	start = time.time()
@@ -38,7 +40,7 @@ def run_plugin( plugin ):
 
 	#end = '[+] Ends   {0:<20}: {:.2f}s'.format( plugin[1], time.time() - start )
 	end = '{:.2f}s'.format( time.time() - start )
-	print '[+] Ends  {:25}--> {}'.format( plugin[1], end )
+	print (Fore.WHITE + '[+]') , 'Ends  {:25}--> {}'.format( plugin[1], end )
 	return
 
 
@@ -58,8 +60,9 @@ def run_concurrently( queue ):
 			time.sleep( 0.05 )
 	#end = '[+] Ends  {:30} {}: {:.2f}s'.format( 'Concurrency of', qsize, 'tasks',time.time() - start)
 	t = '{:.2f}s'.format( time.time() - start )
-	end = '[+] Ends  Concurrent {} Tasks'.format( qsize )
+	end = '[+] Ends  [ {} ] Concurrent Tasks'.format( qsize )
 
-	print '{:35}--> {}{}{}{}'.format(end, t, '\n', '-' * 48, '\n' )
+	print ('\033[1;32;40m' + '{:35}--> {}{}'.format(end, t, '\n'))
+	print '{}{}'.format( '-' * 48, '\n' )
 	#print '{}{}{}{}'.format( end, '\n', '-' * 48, '\n' )
 	return
