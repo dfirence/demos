@@ -134,12 +134,19 @@ _______________________________________________________________________
 
 
 # Sample Runs
+
 Running the program with auto option: >>> volatize.py parsemem --auto --memory /path/to/my/memory/image
+
 ![Screenshot](parsememauto.jpg)
+
 
 Running the program with parsemem option:  >>> volatize.py parsemem -p
 
 ![Screenshot](mainrun.jpg)
+
+
+Running the program with playbook option: >>> volatize.py playbook --vtdumps
+![Screenshot](vtdumps.jpg)
 
 
 
