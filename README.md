@@ -131,10 +131,17 @@ _______________________________________________________________________
 _______________________________________________________________________
 
 
+
+
 # Sample Runs
-Run the program with parsemem option
+Running the program with auto option: >>> volatize.py parsemem --auto --memory /path/to/my/memory/image
+![Screenshot](parsememauto.jpg)
+
+Running the program with parsemem option:  >>> volatize.py parsemem -p
 
 ![Screenshot](mainrun.jpg)
+
+
 
 # Recognition
 @aboutsecurity from Foundstone Intel Security Group on 'Fit for Purpose' feedback
