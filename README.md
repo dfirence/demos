@@ -135,17 +135,20 @@ _______________________________________________________________________
 
 # Sample Runs
 
-Running the program with auto option: >>> volatize.py parsemem --auto --memory /path/to/my/memory/image
+Real World - 4GB Memory Sample Running the program with auto option: >>> volatize.py parsemem --auto --memory /path/to/memory
 
 ![Screenshot](parsememauto.jpg)
 
 
-Running the program with parsemem option:  >>> volatize.py parsemem -p
+
+Real World - 16GB Memory Sample - Running the program with parsemem option:  >>> volatize.py parsemem -p
 
 ![Screenshot](mainrun.jpg)
 
 
+
 Running the program with playbook option: >>> volatize.py playbook --vtdumps
+
 ![Screenshot](vtdumps.jpg)
 
 
