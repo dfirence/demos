@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /bin/bash/env python
 # coding: utf-8
 
 
@@ -103,11 +103,13 @@ def load_dump_commands():
 	bulkex  = os.path.join( os.getcwd(), 'BULKEX' )
 	dumps   = os.path.join( os.getcwd(), 'DUMPS' )
 	pids	= os.path.join( dumps,  'PIDS' )
+	mods	= os.path.join( dumps, 'MODS' )
 	pcap	= os.path.join( bulkex, 'PCAP' )
 	email	= os.path.join( bulkex, 'EMAIL')
 
 	plugins = [
 		['vol.py', 'procdump', '-D', pids]		,
+		['vol.py', 'moddump', '-D', mods ]		,
 		['bulk_extractor', '-E', 'net', '-o', pcap]	,
 		['bulk_extractor', '-E', 'email', '-o', email]	,
 		]
@@ -360,9 +362,36 @@ def load_profiles_exclusion():
 	exclusions['OS']['x64'] = OD()
 	exclusions['OS']['x86'] = OD()
 
-	exclusions['OS']['x64'] = [ 'Win7SP1x64', 'Win2008R2SP1x64_632B36E0', 'Win2008R2SP0x64', 'Win7SP1x64_632B36E0', 'Win2008R2SP1x64', 'Win7SP0x64','Win2012R2x64_54B5A1C6' ]
-	exclusions['OS']['x86'] = [ 'Win7SP0x86', 'Win7SP1x86', 'Win7SP1x86_BBA98F40', 'WinXPSP2x86', 'WinXPSP3x86', 'VistaSP1x86', 'Win2008SP1x86',
-				    'Win2003SP0x86', 'Win2003SP1x86', 'Win2003SP2x86','Win2008SP2x86', 'VistaSP2x86' ]
+	exclusions['OS']['x64'] = [ 	'Win7SP1x64'			,
+					'Win2008R2SP1x64_632B36E0'	,
+					'Win2008R2SP0x64'		,
+					'Win7SP1x64_632B36E0'		,
+					'Win2008R2SP1x64'		,
+					'Win7SP0x64'			,
+					'Win2012R2x64_54B5A1C6'		,
+					'Win8SP0x64'			,
+					'Win2012R2x64'			,
+					'Win2012R2x64_18340'		,
+					'Win2012x64'			,
+					'Win8SP1x64_18340'		,
+					'Win81U1x64'			,
+					'Win8SP1x64'
+				]
+
+	exclusions['OS']['x86'] = [
+					'Win7SP0x86'			,
+					'Win7SP1x86'			,
+					'Win7SP1x86_BBA98F40'		,
+					'WinXPSP2x86'			,
+					'WinXPSP3x86'			,
+					'VistaSP1x86'			,
+					'Win2008SP1x86'			,
+				    	'Win2003SP0x86'			,
+					'Win2003SP1x86'			,
+					'Win2003SP2x86'			,
+					'Win2008SP2x86'			,
+					'VistaSP2x86'
+				]
 	return exclusions
 
 
