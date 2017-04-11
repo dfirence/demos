@@ -59,7 +59,7 @@ def create_case_subfolders():
 	D['BULKEX'] 	= ''
 	D['TIMELINES'] 	= ''
 
-	DUMPS     = [ 'PIDS', 'DLLS', 'EVTX', 'REGISTRY', 'MODS' ]
+	DUMPS     = [ 'PIDS', 'DLLS', 'EVTX', 'REGISTRY' ]
 	BULKEX    = [ 'PCAP', 'URLS', 'EMAIL' ]
 	TIMELINES = [ 'MASTER' ]
 
@@ -97,7 +97,7 @@ def find_markers( imageinfoFile ):
 			for n in range( 3 ):
 				M = RGX[ n ].search( line )
 				if M:
-					res.append( M.group() )
+					res.append( M.group().replace('L','') )
 	return res
 
 
